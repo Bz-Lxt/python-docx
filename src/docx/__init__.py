@@ -9,6 +9,7 @@ from __future__ import annotations
 from typing import TYPE_CHECKING, Type
 
 from docx.api import Document
+from docx.merge import DocumentMerger, MergeConflict, MergeResult, merge_documents
 
 if TYPE_CHECKING:
     from docx.opc.part import Part
@@ -16,7 +17,13 @@ if TYPE_CHECKING:
 __version__ = "1.2.0"
 
 
-__all__ = ["Document"]
+__all__ = [
+    "Document",
+    "DocumentMerger",
+    "MergeConflict",
+    "MergeResult",
+    "merge_documents",
+]
 
 
 # -- register custom Part classes with opc package reader --
